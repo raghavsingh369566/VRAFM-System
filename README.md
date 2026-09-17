@@ -74,7 +74,7 @@ for users who want to explore and rent vehicles.
 
 ### Customer Modules
 
-
+```
 Customer Interface
 │
 ├── Home
@@ -84,12 +84,14 @@ Customer Interface
 ├── Vehicle Details
 │
 └── Booking
+```
 
 
 ---
 
 # 📂 Repository File Structure
 
+```text
 VRAFM-System/
 ├── index.html                              # Home Page (Dev 1)
 ├── IMPLEMENTATION_PLAN.md                  # Detailed 4-Member Development Plan
@@ -139,6 +141,7 @@ VRAFM-System/
         ├── admin.css                        # Scoped Admin Dashboard Styles
         ├── customers.css                    # Scoped Customer Page Styles
         └── maintenance.css                  # Scoped Maintenance Page Styles
+```
 
 ---
 ## 👥 Team Member Task Distribution
