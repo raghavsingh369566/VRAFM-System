@@ -84,3 +84,66 @@ Customer Interface
 ├── Vehicle Details
 │
 └── Booking
+
+---
+
+# 📂 Repository File Structure
+
+VRAFM-System/
+├── index.html                              # Home Page (Dev 1)
+├── IMPLEMENTATION_PLAN.md                  # Detailed 4-Member Development Plan
+├── README.md                               # Master Project Documentation
+│
+├── pages/
+│   ├── vehicles.html                       # Vehicle Listing (Dev 1)
+│   ├── vehicle-details.html                # Vehicle Details (Dev 2)
+│   ├── booking.html                        # Booking Interface (Dev 2)
+│   ├── booking-confirmation.html           # Booking Confirmation (Dev 2)
+│   ├── admin.html                           # Admin Dashboard (Dev 3)
+│   ├── customers.html                       # Customer Management (Dev 3)
+│   └── maintenance.html                     # Maintenance & Fleet Status (Dev 4)
+│
+├── assets/
+│   ├── images/
+│   │   ├── logo/                            # Project Logo
+│   │   ├── vehicles/                        # Vehicle Images
+│   │   ├── cars/                            # Car Images
+│   │   └── bikes/                           # Bike Images
+│   │
+│   └── icons/                               # UI Icons
+│
+└── css/
+    ├── main.css                             # Master CSS Aggregator
+    │
+    ├── tokens/
+    │   └── variables.css                    # CSS Custom Properties & Design Tokens
+    │
+    ├── base/
+    │   ├── reset.css                        # CSS Reset & Normalization
+    │   └── layout.css                       # Global Layout Structure
+    │
+    ├── components/
+    │   ├── buttons.css                      # Button Variants & Hover States
+    │   ├── cards.css                        # Vehicle & Dashboard Cards
+    │   ├── forms.css                        # Forms & Input Components
+    │   ├── tables.css                       # Admin Data Tables
+    │   ├── badges.css                       # Status & Category Badges
+    │   └── navbar.css                       # Navigation Component
+    │
+    └── pages/
+        ├── home.css                         # Scoped Home Page Styles
+        ├── vehicles.css                     # Scoped Vehicle Listing Styles
+        ├── vehicle-details.css              # Scoped Vehicle Details Styles
+        ├── booking.css                      # Scoped Booking Page Styles
+        ├── admin.css                        # Scoped Admin Dashboard Styles
+        ├── customers.css                    # Scoped Customer Page Styles
+        └── maintenance.css                  # Scoped Maintenance Page Styles
+
+---
+| Team Member                                           | Module Ownership                      | Key Deliverables                                                                                                                                                |
+| ----------------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Raghav Singh (Dev 1 - Home & Vehicle Lead)**        | Home & Vehicle Listing                | `index.html`, `pages/vehicles.html`, `base/reset.css`, `base/layout.css`, `components/navbar.css`, `pages/home.css`, `pages/vehicles.css`                       |
+| **Rishabh Varshney (Dev 2 - Vehicle & Booking Lead)** | Vehicle Details & Booking             | `pages/vehicle-details.html`, `pages/booking.html`, `pages/booking-confirmation.html`, `components/forms.css`, `pages/vehicle-details.css`, `pages/booking.css` |
+| **Riya (Dev 3 - Admin Management Lead)**              | Admin Dashboard & Customer Management | `pages/admin.html`, `pages/customers.html`, `components/tables.css`, `components/badges.css`, `pages/admin.css`, `pages/customers.css`                          |
+| **Rishi (Dev 4 - Maintenance & Fleet Lead)**          | Maintenance & Fleet Status            | `pages/maintenance.html`, `components/cards.css`, `pages/maintenance.css`, responsive integration, final UI testing                                             |
+
