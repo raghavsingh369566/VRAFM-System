@@ -157,10 +157,14 @@ The project is divided among four team members. Each member is responsible for s
 
 ---
 
-#🚗 VRAFM-System
+##🚗 VRAFM-System
 
 Vehicle Rental & Fleet Management System
 
 Built with HTML5 & CSS3 by a 4-member development team.
 
-Made with ❤️ by the VRAFM Engineering Team
+<p align="center">
+  Made with ❤️ by the REPMS Engineering Team
+</p>
+
+---
