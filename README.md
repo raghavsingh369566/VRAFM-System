@@ -140,10 +140,23 @@ VRAFM-System/
         └── maintenance.css                  # Scoped Maintenance Page Styles
 
 ---
-| Team Member                                           | Module Ownership                      | Key Deliverables                                                                                                                                                |
-| ----------------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Raghav Singh (Dev 1 - Home & Vehicle Lead)**        | Home & Vehicle Listing                | `index.html`, `pages/vehicles.html`, `base/reset.css`, `base/layout.css`, `components/navbar.css`, `pages/home.css`, `pages/vehicles.css`                       |
-| **Rishabh Varshney (Dev 2 - Vehicle & Booking Lead)** | Vehicle Details & Booking             | `pages/vehicle-details.html`, `pages/booking.html`, `pages/booking-confirmation.html`, `components/forms.css`, `pages/vehicle-details.css`, `pages/booking.css` |
-| **Riya (Dev 3 - Admin Management Lead)**              | Admin Dashboard & Customer Management | `pages/admin.html`, `pages/customers.html`, `components/tables.css`, `components/badges.css`, `pages/admin.css`, `pages/customers.css`                          |
-| **Rishi (Dev 4 - Maintenance & Fleet Lead)**          | Maintenance & Fleet Status            | `pages/maintenance.html`, `components/cards.css`, `pages/maintenance.css`, responsive integration, final UI testing                                             |
+## 👥 Team Member Task Distribution
 
+The project is divided among four team members. Each member is responsible for specific HTML pages, CSS components, and page-level styling.
+
+| Team Member | Role | Module | Main Responsibilities | Branch |
+|---|---|---|---|---|
+| **Raghav Singh** | Dev 1 | 🏠 Home & Vehicle Listing | Homepage, navigation, vehicle listing, vehicle cards, responsive layout | `feature/Raghav` |
+| **Rishabh Varshney** | Dev 2 | 🚗 Vehicle Details & Booking | Vehicle details, booking form, confirmation page, form styling | `feature/Rishabh` |
+| **Riya** | Dev 3 | 🛠️ Admin & Customer Management | Admin dashboard, customer management, tables, status badges | `feature/riya` |
+| **Rishi** | Dev 4 | 🔧 Maintenance & Fleet Status | Maintenance page, fleet status, reusable cards, responsive testing | `feature/rishi` |
+
+---
+
+#🚗 VRAFM-System
+
+Vehicle Rental & Fleet Management System
+
+Built with HTML5 & CSS3 by a 4-member development team.
+
+Made with ❤️ by the VRAFM Engineering Team
