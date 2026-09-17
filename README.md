@@ -74,7 +74,7 @@ for users who want to explore and rent vehicles.
 
 ### Customer Modules
 
-```text
+
 Customer Interface
 │
 ├── Home
@@ -84,6 +84,7 @@ Customer Interface
 ├── Vehicle Details
 │
 └── Booking
+
 
 ---
 
