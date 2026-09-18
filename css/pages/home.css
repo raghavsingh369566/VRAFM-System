@@ -1,0 +1,71 @@
+/* Home Page Specific Styles */
+
+/* Hero Section */
+.hero-section {
+  padding: 6rem 2rem;
+  text-align: center;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sections */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+/* Categories Section */
+.category-box {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category-box:hover {
+  border-color: var(--primary-color);
+  background-color: var(--bg-secondary);
+}
+
+.category-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.category-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Footer */
+.footer-custom {
+  background-color: var(--nav-bg);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--text-secondary);
+}

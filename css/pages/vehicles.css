@@ -1,0 +1,58 @@
+/* Vehicles Listing Page Specific Styles */
+.page-header {
+  padding: 3rem 0;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.filters-sidebar {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.form-check-label {
+  color: var(--text-secondary);
+}
+
+.pagination-custom {
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.page-link {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.page-link:hover {
+  background-color: var(--bg-secondary);
+  color: var(--primary-color);
+}
+
+.page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}

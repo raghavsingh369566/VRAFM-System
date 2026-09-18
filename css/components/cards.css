@@ -1,0 +1,50 @@
+/* Vehicle Card Custom Styles */
+.vehicle-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+body:has(#theme-toggle:checked) .vehicle-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.vehicle-card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  background-color: var(--bg-secondary); /* fallback if image doesn't load */
+}
+
+.vehicle-card .card-body {
+  padding: 1.5rem;
+}
+
+.vehicle-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.vehicle-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.vehicle-features {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.vehicle-features span {
+  display: inline-block;
+  margin-right: 10px;
+}
