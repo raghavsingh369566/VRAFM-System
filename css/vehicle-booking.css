@@ -1,0 +1,185 @@
+
+:root {
+  --page-bg: #f7f8fa;
+  --card-bg: #ffffff;
+  --primary: #2d6a9f;
+  --primary-dark: #245683;
+  --text: #333333;
+  --border: #e3e3e3;
+
+  
+  --bs-primary: #2d6a9f;
+  --bs-primary-rgb: 45, 106, 159;
+  --bs-link-color: #2d6a9f;
+  --bs-link-hover-color: #245683;
+}
+
+
+body {
+  background-color: var(--page-bg);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+.site-navbar {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-navbar .navbar-brand {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.site-navbar .nav-link {
+  color: var(--text);
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link.active {
+  color: var(--primary);
+}
+
+.page-header {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+}
+
+.page-header h1 {
+  color: var(--primary);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.section-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 1.25rem;
+}
+
+.section-title {
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.vehicle-image-box {
+  background-color: #eef1f5;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.vehicle-image-box img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.vehicle-price {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.vehicle-specs dt {
+  color: #6c757d;
+  font-weight: 400;
+}
+
+.vehicle-specs dd {
+  font-weight: 600;
+}
+
+
+.feature-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: 6px;
+  font-size: 0.925rem;
+  padding: 0.6rem 0.85rem;
+}
+
+.form-group-title {
+  border-bottom: 1px solid var(--border);
+  color: var(--primary);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(45, 106, 159, 0.2);
+}
+
+.form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.form-check-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(45, 106, 159, 0.2);
+}
+
+.btn-primary {
+  --bs-btn-bg: #2d6a9f;
+  --bs-btn-border-color: #2d6a9f;
+  --bs-btn-hover-bg: #245683;
+  --bs-btn-hover-border-color: #245683;
+  --bs-btn-active-bg: #1f4a70;
+  --bs-btn-active-border-color: #1f4a70;
+  --bs-btn-focus-shadow-rgb: 45, 106, 159;
+}
+
+.summary-row {
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 0.55rem 0;
+}
+
+.summary-row dt {
+  color: #6c757d;
+  font-weight: 400;
+}
+
+.summary-row dd {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.summary-row-total {
+  border-bottom: 0;
+}
+
+.summary-row-total dt,
+.summary-row-total dd {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.confirmation-card {
+  border-left: 4px solid var(--primary);
+}
+
+@media (max-width: 575.98px) {
+  .site-navbar .navbar-brand {
+    margin-right: 0.5rem;
+  }
+
+  .site-navbar .nav-link {
+    font-size: 0.9rem;
+  }
+}
