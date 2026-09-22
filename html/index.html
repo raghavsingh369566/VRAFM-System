@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VRAFM - Vehicle Rental & Fleet Management</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/tokens/variables.css">
+    <link rel="stylesheet" href="../css/components/navbar.css">
+    <link rel="stylesheet" href="../css/components/cards.css">
+    <link rel="stylesheet" href="../css/pages/home.css">
+</head>
+
+<body>
+
+    <!-- Hidden Checkbox for CSS-Only Theme Toggle -->
+    <input type="checkbox" id="theme-toggle">
+
+
+    <!-- ================= NAVIGATION BAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                VRAFM
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto align-items-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <!-- Vehicles page will be added later -->
+                        <a class="nav-link" href="#">
+                            Vehicles
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="login.html">
+                            Login
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">
+                            Register
+                        </a>
+                    </li>
+
+                    <!-- Theme Toggle -->
+                    <li class="nav-item">
+
+                        <label
+                            for="theme-toggle"
+                            class="theme-toggle-label mb-0"
+                            title="Toggle Light/Dark Mode">
+                        </label>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero-section">
+
+        <div class="container">
+
+            <h1 class="hero-title">
+                Find Your Perfect Ride
+            </h1>
+
+            <p class="hero-subtitle">
+                Explore a wide range of premium cars, bikes, and
+                commercial vehicles available for immediate rental.
+            </p>
+
+            <a
+                href="#"
+                class="btn btn-primary btn-lg px-4 py-2">
+                Browse Vehicles
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES SECTION ================= -->
+
+    <section class="container py-5">
+
+        <h2 class="section-title">
+            Explore by Category
+        </h2>
+
+
+        <div class="row g-4">
+
+            <!-- Cars -->
+            <div class="col-md-4">
+
+                <div class="category-box">
+
+                    <div class="category-icon">
+                        🚗
+                    </div>
+
+                    <div class="category-title">
+                        Cars & SUVs
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bikes -->
+            <div class="col-md-4">
+
+                <div class="category-box">
+
+                    <div class="category-icon">
+                        🏍️
+                    </div>
+
+                    <div class="category-title">
+                        Bikes & Scooters
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Commercial -->
+            <div class="col-md-4">
+
+                <div class="category-box">
+
+                    <div class="category-icon">
+                        🚐
+                    </div>
+
+                    <div class="category-title">
+                        Commercial Vans
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURED VEHICLES ================= -->
+
+    <section class="container py-5">
+
+        <h2 class="section-title">
+            Featured Vehicles
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <!-- Vehicle Card 1 -->
+            <div class="col-md-4">
+
+                <div class="card vehicle-card h-100 border-0">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        alt="Premium Sedan">
+
+                    <div class="card-body">
+
+                        <h5 class="vehicle-title">
+                            Premium Sedan
+                        </h5>
+
+                        <div class="vehicle-price">
+                            $45 / day
+                        </div>
+
+                        <div class="vehicle-features">
+
+                            <span>
+                                💺 5 Seats
+                            </span>
+
+                            <span>
+                                🕹️ Auto
+                            </span>
+
+                            <span>
+                                ❄️ AC
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            class="btn btn-outline-primary w-100">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Vehicle Card 2 -->
+            <div class="col-md-4">
+
+                <div class="card vehicle-card h-100 border-0">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        alt="Sports Bike">
+
+                    <div class="card-body">
+
+                        <h5 class="vehicle-title">
+                            Sports Bike
+                        </h5>
+
+                        <div class="vehicle-price">
+                            $25 / day
+                        </div>
+
+                        <div class="vehicle-features">
+
+                            <span>
+                                💺 2 Seats
+                            </span>
+
+                            <span>
+                                🕹️ Manual
+                            </span>
+
+                            <span>
+                                🚀 600cc
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            class="btn btn-outline-primary w-100">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Vehicle Card 3 -->
+            <div class="col-md-4">
+
+                <div class="card vehicle-card h-100 border-0">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1534093607318-f025413f49cb?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        alt="Family SUV">
+
+                    <div class="card-body">
+
+                        <h5 class="vehicle-title">
+                            Family SUV
+                        </h5>
+
+                        <div class="vehicle-price">
+                            $60 / day
+                        </div>
+
+                        <div class="vehicle-features">
+
+                            <span>
+                                💺 7 Seats
+                            </span>
+
+                            <span>
+                                🕹️ Auto
+                            </span>
+
+                            <span>
+                                🧳 Large Boot
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            class="btn btn-outline-primary w-100">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer-custom">
+
+        <div class="container">
+
+            <p class="mb-0">
+                &copy; 2024 VRAFM System. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

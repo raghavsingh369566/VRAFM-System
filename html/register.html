@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - VRAFM System</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/tokens/variables.css">
+    <link rel="stylesheet" href="../css/pages/register.css">
+
+</head>
+
+
+<body>
+
+    <!-- Hidden Checkbox for CSS-Only Theme Toggle -->
+    <input
+        type="checkbox"
+        id="theme-toggle">
+
+
+    <!-- ================= REGISTER CONTAINER ================= -->
+
+    <div class="register-container">
+
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-wrapper">
+
+            <label
+                for="theme-toggle"
+                class="theme-toggle-label"
+                title="Toggle Light/Dark Mode">
+            </label>
+
+        </div>
+
+
+        <!-- ================= REGISTER CARD ================= -->
+
+        <div class="register-card">
+
+
+            <!-- Register Header -->
+            <div class="register-header">
+
+                <h1>
+                    VRAFM
+                </h1>
+
+                <p>
+                    Create your account to get started.
+                </p>
+
+            </div>
+
+
+            <!-- ================= REGISTER FORM ================= -->
+
+            <form
+                action="index.html"
+                method="GET">
+
+
+                <!-- Full Name -->
+                <div class="mb-3">
+
+                    <label
+                        for="fullName"
+                        class="form-label form-label-custom">
+
+                        Full Name
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        class="form-control form-control-custom"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="mb-3">
+
+                    <label
+                        for="email"
+                        class="form-label form-label-custom">
+
+                        Email address
+
+                    </label>
+
+
+                    <input
+                        type="email"
+                        class="form-control form-control-custom"
+                        id="email"
+                        name="email"
+                        placeholder="name@example.com"
+                        required>
+
+                </div>
+
+
+                <!-- Phone Number -->
+                <div class="mb-3">
+
+                    <label
+                        for="phone"
+                        class="form-label form-label-custom">
+
+                        Phone Number
+
+                    </label>
+
+
+                    <input
+                        type="tel"
+                        class="form-control form-control-custom"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="mb-3">
+
+                    <label
+                        for="password"
+                        class="form-label form-label-custom">
+
+                        Password
+
+                    </label>
+
+
+                    <input
+                        type="password"
+                        class="form-control form-control-custom"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        required>
+
+                </div>
+
+
+                <!-- Confirm Password -->
+                <div class="mb-3">
+
+                    <label
+                        for="confirmPassword"
+                        class="form-label form-label-custom">
+
+                        Confirm Password
+
+                    </label>
+
+
+                    <input
+                        type="password"
+                        class="form-control form-control-custom"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Confirm your password"
+                        required>
+
+                </div>
+
+
+                <!-- Terms & Conditions -->
+                <div class="mb-3 form-check">
+
+                    <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="terms"
+                        name="terms"
+                        required>
+
+
+                    <label
+                        class="form-check-label form-label-custom"
+                        for="terms">
+
+                        I agree to the Terms and Conditions
+
+                    </label>
+
+                </div>
+
+
+                <!-- Register Button -->
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-primary-custom">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+
+            <!-- ================= REGISTER FOOTER ================= -->
+
+            <div class="register-footer">
+
+                <p>
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login here
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
