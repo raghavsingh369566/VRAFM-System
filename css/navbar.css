@@ -1,33 +1,84 @@
-/* Navbar Custom Styles */
-.navbar-brand {
-  font-weight: 700;
-  color: var(--primary-color) !important;
-  font-size: 1.5rem;
+/* =========================================
+   VRAFM GLOBAL NAVBAR
+   ========================================= */
+
+.navbar-custom {
+    background-color: var(--nav-bg);
+
+    border-bottom: 1px solid var(--border-color);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
 }
+
+
+/* Logo */
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+}
+
+
+/* Navigation */
 
 .nav-link {
-  color: var(--text-primary) !important;
-  font-weight: 500;
-  transition: color 0.2s ease-in-out;
+    color: var(--text-primary) !important;
+
+    font-weight: 500;
+
+    transition: color 0.2s ease;
 }
 
-.nav-link:hover, .nav-link.active {
-  color: var(--primary-color) !important;
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
 }
 
-/* Position the theme toggle inside the navbar */
-.navbar .theme-toggle-label {
-  margin-left: 1rem;
-  font-size: 1.25rem; /* Larger for emoji */
-  padding: 0.375rem 0.75rem;
-  line-height: 1;
+
+/* =========================================
+   THEME TOGGLE
+   ========================================= */
+
+#theme-toggle {
+    display: none;
 }
 
-/* Moon / Sun Icon Toggle using CSS */
+
+.theme-toggle-label {
+    cursor: pointer;
+
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    margin-left: 8px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 6px;
+
+    background-color: var(--bg-secondary);
+
+    font-size: 18px;
+}
+
+
+/* Light mode = moon */
+
 .theme-toggle-label::after {
-  content: "🌙";
+    content: "🌙";
 }
 
-body:has(#theme-toggle:checked) .theme-toggle-label::after {
-  content: "☀️";
+
+/* Dark mode = sun */
+
+body:has(#theme-toggle:checked)
+.theme-toggle-label::after {
+    content: "☀️";
 }

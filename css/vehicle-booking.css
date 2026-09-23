@@ -1,0 +1,711 @@
+/* =====================================================
+   VRAFM VEHICLE PAGE
+   Simple HTML + CSS
+   Uses the same theme variables
+   ===================================================== */
+
+
+/* ===============================
+   LIGHT THEME
+   =============================== */
+
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+
+    --card-bg: #ffffff;
+
+    --border-color: #dee2e6;
+
+    --primary-color: #0d6efd;
+    --primary-hover: #0b5ed7;
+
+    --nav-bg: #ffffff;
+}
+
+
+/* ===============================
+   DARK THEME
+   =============================== */
+
+body:has(#theme-toggle:checked) {
+
+    --bg-primary: #212529;
+    --bg-secondary: #343a40;
+
+    --text-primary: #f8f9fa;
+    --text-secondary: #adb5bd;
+
+    --card-bg: #2b3035;
+
+    --border-color: #495057;
+
+    --primary-color: #3d8bfd;
+    --primary-hover: #6ea8fe;
+
+    --nav-bg: #212529;
+}
+
+
+/* ===============================
+   BASIC RESET
+   =============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    width: 100%;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+    overflow-x: hidden;
+}
+
+
+/* ===============================
+   COMMON CONTAINER
+   =============================== */
+
+.container {
+    width: 100%;
+    max-width: 1370px;
+
+    margin: 0 auto;
+
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/* ===============================
+   NAVBAR
+   =============================== */
+
+.navbar {
+    width: 100%;
+
+    background-color: var(--nav-bg);
+
+    border-bottom: 1px solid var(--border-color);
+
+    transition: background-color 0.3s ease;
+}
+
+
+.nav-container {
+    width: 100%;
+    max-width: 1370px;
+
+    margin: auto;
+
+    padding: 18px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* LOGO */
+
+.logo {
+    color: var(--primary-color);
+
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    flex-wrap: wrap;
+}
+
+
+.nav-links a {
+    color: var(--text-primary);
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+
+/* ===============================
+   THEME BUTTON
+   =============================== */
+
+#theme-toggle {
+    display: none;
+}
+
+
+.theme-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 45px;
+
+    background-color: var(--bg-secondary);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    transition: background-color 0.3s ease;
+}
+
+
+.theme-button:hover {
+    background-color: var(--border-color);
+}
+
+
+/* ===============================
+   PAGE HEADER
+   =============================== */
+
+.page-header {
+    width: 100%;
+
+    background-color: var(--bg-secondary);
+
+    border-bottom: 1px solid var(--border-color);
+
+    padding: 48px 0;
+
+    transition: background-color 0.3s ease;
+}
+
+
+.page-header h1 {
+    font-size: 36px;
+
+    margin-bottom: 12px;
+
+    color: var(--text-primary);
+}
+
+
+.page-header p {
+    font-size: 18px;
+
+    color: var(--text-secondary);
+}
+
+
+/* ===============================
+   VEHICLE CARD
+   =============================== */
+
+main.container {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+
+.vehicle-card {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+
+    gap: 35px;
+
+    padding: 28px;
+
+    background-color: var(--card-bg);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ===============================
+   VEHICLE IMAGE
+   =============================== */
+
+.vehicle-image {
+
+    width: 100%;
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg-secondary);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.vehicle-image img {
+
+    width: 100%;
+    height: 430px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ===============================
+   VEHICLE INFORMATION
+   =============================== */
+
+.vehicle-info {
+    min-width: 0;
+
+    padding: 20px 0;
+}
+
+
+.title-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 15px;
+}
+
+
+.title-row h2 {
+
+    font-size: 32px;
+
+    color: var(--text-primary);
+}
+
+
+/* AVAILABLE BADGE */
+
+.available {
+
+    background-color: #198754;
+
+    color: white;
+
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* PRICE */
+
+.price {
+
+    color: var(--primary-color);
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+
+.price span {
+
+    color: var(--text-secondary);
+
+    font-size: 16px;
+
+    font-weight: 400;
+}
+
+
+/* ===============================
+   VEHICLE DETAILS
+   =============================== */
+
+.vehicle-details {
+
+    margin-bottom: 25px;
+}
+
+
+.detail-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    padding: 8px 0;
+}
+
+
+.detail-row span {
+
+    color: var(--text-secondary);
+
+    font-size: 17px;
+}
+
+
+.detail-row strong {
+
+    color: var(--text-primary);
+
+    font-size: 17px;
+}
+
+
+/* ===============================
+   DESCRIPTION
+   =============================== */
+
+.description {
+
+    color: var(--text-secondary);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* ===============================
+   BOOKING SECTION
+   =============================== */
+
+.booking-section {
+
+    border-top: 1px solid var(--border-color);
+
+    padding-top: 25px;
+}
+
+
+.booking-section h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 20px;
+
+    color: var(--text-primary);
+}
+
+
+/* FORM */
+
+form {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group label {
+
+    color: var(--text-primary);
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 6px;
+
+    background-color: var(--bg-primary);
+
+    color: var(--text-primary);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: border-color 0.2s ease;
+}
+
+
+.form-group input:focus {
+
+    border-color: var(--primary-color);
+}
+
+
+/* BOOK BUTTON */
+
+.book-button {
+
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: var(--primary-color);
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+
+.book-button:hover {
+
+    background-color: var(--primary-hover);
+}
+
+
+/* ===============================
+   FOOTER
+   =============================== */
+
+.footer {
+
+    width: 100%;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: var(--bg-secondary);
+
+    border-top: 1px solid var(--border-color);
+
+    color: var(--text-secondary);
+}
+
+
+/* ===============================
+   TABLET
+   =============================== */
+
+@media (max-width: 900px) {
+
+    .vehicle-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .vehicle-image {
+
+        min-height: 350px;
+
+    }
+
+    .vehicle-image img {
+
+        height: 350px;
+
+    }
+
+}
+
+
+/* ===============================
+   MOBILE
+   =============================== */
+
+@media (max-width: 650px) {
+
+    .nav-container {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .nav-links {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .container {
+
+        padding-left: 18px;
+        padding-right: 18px;
+
+    }
+
+
+    .page-header {
+
+        padding: 35px 0;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .vehicle-card {
+
+        padding: 18px;
+
+    }
+
+
+    .vehicle-image {
+
+        min-height: 250px;
+
+    }
+
+
+    .vehicle-image img {
+
+        height: 250px;
+
+    }
+
+
+    .title-row h2 {
+
+        font-size: 26px;
+
+    }
+
+
+    .price {
+
+        font-size: 26px;
+
+    }
+
+
+    form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .book-button {
+
+        grid-column: auto;
+
+    }
+
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VRAFM - Vehicle Details & Booking</title>
+
+    <link rel="stylesheet" href="../css/vehicle-booking.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">VRAFM</a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="vehicles.html" class="active">Vehicles</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+
+                <!-- Theme Toggle -->
+                <label for="theme-toggle" class="theme-button">
+                    🌙
+                </label>
+
+                <input type="checkbox" id="theme-toggle">
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- PAGE INTRO -->
+    <section class="page-header">
+
+        <div class="container">
+
+            <h1>Vehicle Details & Booking</h1>
+
+            <p>
+                View vehicle information and submit your rental request.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- VEHICLE DETAILS -->
+    <main class="container">
+
+        <div class="vehicle-card">
+
+            <!-- VEHICLE IMAGE -->
+            <div class="vehicle-image">
+
+               <img
+    src="https://toyotathaihoatuliem.com.vn/wp-content/uploads/2024/08/mau-sac-toyota-fortuner-2024-5.jpg"
+    alt="Toyota Fortuner"
+>
+
+            </div>
+
+
+            <!-- VEHICLE INFORMATION -->
+            <div class="vehicle-info">
+
+                <div class="title-row">
+
+                    <h2>Toyota Fortuner</h2>
+
+                    <span class="available">
+                        Available
+                    </span>
+
+                </div>
+
+
+                <div class="price">
+                    ₹4,500 <span>/ day</span>
+                </div>
+
+
+                <div class="vehicle-details">
+
+                    <div class="detail-row">
+                        <span>Type</span>
+                        <strong>SUV</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Fuel</span>
+                        <strong>Diesel</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Transmission</span>
+                        <strong>Automatic</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Seats</span>
+                        <strong>7</strong>
+                    </div>
+
+                </div>
+
+
+                <p class="description">
+                    Spacious and comfortable SUV suitable for family trips,
+                    business travel and long-distance journeys.
+                </p>
+
+
+                <!-- BOOKING FORM -->
+                <div class="booking-section">
+
+                    <h3>Book This Vehicle</h3>
+
+                    <form>
+
+                        <div class="form-group">
+
+                            <label for="pickup">
+                                Pickup Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="pickup"
+                                name="pickup"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="return">
+                                Return Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="return"
+                                name="return"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="location">
+                                Pickup Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                placeholder="Enter pickup location"
+                            >
+
+                        </div>
+
+
+                        <button type="submit" class="book-button">
+                            Book Now
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            © 2026 VRAFM - Vehicle Rental & Fleet Management
+        </p>
+
+    </footer>
+
+</body>
+</html>
