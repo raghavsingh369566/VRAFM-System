@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maintenance & Fleet Status</title>
+
+    <link rel="stylesheet" href="../maintenance-css/maintenance.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            VRAFM
+        </div>
+
+        <nav class="navbar">
+            <a href="#">Dashboard</a>
+            <a href="#">Vehicles</a>
+            <a href="#" class="active">Maintenance</a>
+            <a href="#">Bookings</a>
+        </nav>
+
+        <div class="profile">
+            <span class="profile-icon">RS</span>
+            <span>Rishi</span>
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <div>
+                <h1>Maintenance & Fleet Status</h1>
+
+                <p>
+                    Monitor vehicle availability, maintenance schedules
+                    and fleet health.
+                </p>
+            </div>
+
+            <button class="add-btn">
+                + Add Maintenance
+            </button>
+
+        </section>
+
+
+        <!-- Fleet Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🚗
+                </div>
+
+                <div>
+                    <p>Total Vehicles</p>
+                    <h2>48</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <p>Available</p>
+                    <h2>32</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ↗
+                </div>
+
+                <div>
+                    <p>Rented</p>
+                    <h2>11</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🔧
+                </div>
+
+                <div>
+                    <p>Maintenance</p>
+                    <h2>5</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Fleet Status -->
+        <section class="fleet-section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Fleet Status</h2>
+
+                    <p>
+                        Current status of all vehicles
+                    </p>
+                </div>
+
+                <select class="filter">
+
+                    <option>All Vehicles</option>
+                    <option>Available</option>
+                    <option>Rented</option>
+                    <option>Maintenance</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Vehicle Cards -->
+            <div class="vehicle-grid">
+
+
+                <!-- Vehicle 1 -->
+                <article class="vehicle-card">
+
+                    <div class="vehicle-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=900&q=80"
+                            alt="SUV vehicle">
+
+                    </div>
+
+
+                    <div class="vehicle-content">
+
+                        <div class="vehicle-title">
+
+                            <div>
+                                <h3>Mahindra XUV700</h3>
+                                <p>HR 26 AB 1234</p>
+                            </div>
+
+                            <span class="status available">
+                                Available
+                            </span>
+
+                        </div>
+
+
+                        <div class="vehicle-info">
+
+                            <div>
+                                <span>Category</span>
+                                <strong>SUV</strong>
+                            </div>
+
+                            <div>
+                                <span>Last Service</span>
+                                <strong>10 Sep 2026</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="vehicle-info">
+
+                            <div>
+                                <span>Next Service</span>
+                                <strong>10 Dec 2026</strong>
+                            </div>
+
+                            <div>
+                                <span>Maintenance Cost</span>
+                                <strong>₹4,500</strong>
+                            </div>
+
+                        </div>
+
+
+                        <button class="details-btn">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Vehicle 2 -->
+                <article class="vehicle-card">
+
+                    <div class="vehicle-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80"
+                            alt="White SUV">
+
+                    </div>
+
+
+                    <div class="vehicle-content">
+
+                        <div class="vehicle-title">
+
+                            <div>
+                                <h3>Hyundai Creta</h3>
+                                <p>HR 29 CD 5678</p>
+                            </div>
+
+                            <span class="status rented">
+                                Rented
+                            </span>
+
+                        </div>
+
+
+                        <div class="vehicle-info">
+
+                            <div>
+                                <span>Category</span>
+                                <strong>SUV</strong>
+                            </div>
+
+                            <div>
+                                <span>Last Service</span>
+                                <strong>02 Aug 2026</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="vehicle-info">
+
+                            <div>
+                                <span>Next Service</span>
+                                <strong>02 Nov 2026</strong>
+                            </div>
+
+                            <div>
+                                <span>Maintenance Cost</span>
+                                <strong>₹3,800</strong>
+                            </div>
+
+                        </div>
+
+
+                        <button class="details-btn">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Vehicle 3 -->
+                <article class="vehicle-card">
+
+                    <div class="vehicle-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=900&q=80"
+                            alt="Modern vehicle">
+
+                    </div>
+
+
+                    <div class="vehicle-content">
+
+                        <div class="vehicle-title">
+
+                            <div>
+                                <h3>Tata Nexon</h3>
+                                <p>HR 30 EF 9012</p>
+                            </div>
+
+                            <span class="status maintenance">
+                                Maintenance
+                            </span>
+
+                        </div>
+
+
+                        <div class="vehicle-info">
+
+                            <div>
+                                <span>Category</span>
+                                <strong>Compact SUV</strong>
+                            </div>
+
+                            <div>
+                                <span>Last Service</span>
+                                <strong>15 Sep 2026</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="vehicle-info">
+
+                            <div>
+                                <span>Next Service</span>
+                                <strong>20 Sep 2026</strong>
+                            </div>
+
+                            <div>
+                                <span>Maintenance Cost</span>
+                                <strong>₹8,200</strong>
+                            </div>
+
+                        </div>
+
+
+                        <button class="details-btn">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Vehicle 4 -->
+                <article class="vehicle-card">
+
+                    <div class="vehicle-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=900&q=80"
+                            alt="Car">
+
+                    </div>
+
+
+                    <div class="vehicle-content">
+
+                        <div class="vehicle-title">
+
+                            <div>
+                                <h3>Maruti Swift</h3>
+                                <p>HR 38 GH 3456</p>
+                            </div>
+
+                            <span class="status available">
+                                Available
+                            </span>
+
+                        </div>
+
+
+                        <div class="vehicle-info">
+
+                            <div>
+                                <span>Category</span>
+                                <strong>Hatchback</strong>
+                            </div>
+
+                            <div>
+                                <span>Last Service</span>
+                                <strong>05 Sep 2026</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="vehicle-info">
+
+                            <div>
+                                <span>Next Service</span>
+                                <strong>05 Dec 2026</strong>
+                            </div>
+
+                            <div>
+                                <span>Maintenance Cost</span>
+                                <strong>₹2,900</strong>
+                            </div>
+
+                        </div>
+
+
+                        <button class="details-btn">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Maintenance Records -->
+        <section class="maintenance-section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Maintenance Records</h2>
+
+                    <p>
+                        Recent vehicle maintenance activities
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Vehicle</th>
+                            <th>Service Type</th>
+                            <th>Service Date</th>
+                            <th>Next Service</th>
+                            <th>Cost</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Mahindra XUV700
+                            </td>
+
+                            <td>
+                                Regular Service
+                            </td>
+
+                            <td>
+                                10 Sep 2026
+                            </td>
+
+                            <td>
+                                10 Dec 2026
+                            </td>
+
+                            <td>
+                                ₹4,500
+                            </td>
+
+                            <td>
+                                <span class="table-status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Hyundai Creta
+                            </td>
+
+                            <td>
+                                Oil Change
+                            </td>
+
+                            <td>
+                                02 Aug 2026
+                            </td>
+
+                            <td>
+                                02 Nov 2026
+                            </td>
+
+                            <td>
+                                ₹3,800
+                            </td>
+
+                            <td>
+                                <span class="table-status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Tata Nexon
+                            </td>
+
+                            <td>
+                                Brake Service
+                            </td>
+
+                            <td>
+                                15 Sep 2026
+                            </td>
+
+                            <td>
+                                20 Sep 2026
+                            </td>
+
+                            <td>
+                                ₹8,200
+                            </td>
+
+                            <td>
+                                <span class="table-status pending">
+                                    In Progress
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 VRAFM - Vehicle Rental & Fleet Management System
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
