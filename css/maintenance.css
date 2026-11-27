@@ -680,3 +680,188 @@ tbody tr:hover {
     }
 
 }
+
+
+
+/* =========================================
+   VRAFM MODAL AND FORM STYLING
+========================================= */
+
+.vrafm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.vrafm-modal {
+    background: #ffffff;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    animation: modalOpen 0.25s ease;
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.vrafm-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.vrafm-modal-header h2 {
+    font-size: 21px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #6b7280;
+}
+
+.vrafm-modal-body {
+    padding: 22px;
+}
+
+.vrafm-modal-body form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.vrafm-modal-body label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.vrafm-modal-body input,
+.vrafm-modal-body select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.vrafm-modal-body input:focus,
+.vrafm-modal-body select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #2563eb20;
+}
+
+.vrafm-modal-body form .add-btn {
+    margin-top: 12px;
+}
+
+.vehicle-detail img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.vehicle-detail h3 {
+    margin: 12px 0;
+}
+
+.vehicle-detail p {
+    margin-bottom: 10px;
+    color: #4b5563;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-actions button {
+    flex: 1;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 11px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+/* Notifications */
+
+.vrafm-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #15803d;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 8px;
+    z-index: 10000;
+    opacity: 0;
+    transform: translateY(-15px);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.vrafm-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vrafm-toast.error {
+    background: #dc2626;
+}
+
+/* Responsive Modal */
+
+@media(max-width: 600px) {
+
+    .vrafm-modal {
+        max-width: 100%;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .fleet-controls {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #searchVehicle {
+        width: 100%;
+    }
+
+}
