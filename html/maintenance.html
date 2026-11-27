@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,14 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Maintenance & Fleet Status</title>
+    <title>VRAFM | Vehicle Rental & Fleet Management</title>
 
-    <link rel="stylesheet" href="../maintenance-css/maintenance.css">
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
 
-    <!-- Header -->
+    <!-- ================= HEADER ================= -->
+
     <header class="header">
 
         <div class="logo">
@@ -20,44 +23,57 @@
         </div>
 
         <nav class="navbar">
-            <a href="#">Dashboard</a>
-            <a href="#">Vehicles</a>
-            <a href="#" class="active">Maintenance</a>
-            <a href="#">Bookings</a>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#fleet">Vehicles</a>
+            <a href="#maintenance">Maintenance</a>
+            <a href="#bookings">Bookings</a>
         </nav>
 
         <div class="profile">
+
             <span class="profile-icon">RS</span>
-            <span>Rishi</span>
+
+            <span>Admin</span>
+
         </div>
 
     </header>
 
 
-    <!-- Main Content -->
+    <!-- ================= MAIN CONTAINER ================= -->
+
     <main class="container">
 
-        <!-- Page Heading -->
+
+        <!-- ================= PAGE HEADING ================= -->
+
         <section class="page-heading">
 
             <div>
+
                 <h1>Maintenance & Fleet Status</h1>
 
                 <p>
                     Monitor vehicle availability, maintenance schedules
                     and fleet health.
                 </p>
-            </div>
 
-            <button class="add-btn">
+            </div>
+            
+            <button class="add-btn" id="addMaintenanceBtn">
+
                 + Add Maintenance
+
             </button>
 
         </section>
 
 
-        <!-- Fleet Statistics -->
+        <!-- ================= STATISTICS ================= -->
+
         <section class="stats-grid">
+
+            <!-- Total Vehicles -->
 
             <div class="stat-card">
 
@@ -66,12 +82,17 @@
                 </div>
 
                 <div>
+
                     <p>Total Vehicles</p>
-                    <h2>48</h2>
+
+                    <h2 id="totalVehicles">4</h2>
+
                 </div>
 
             </div>
 
+
+            <!-- Available Vehicles -->
 
             <div class="stat-card">
 
@@ -80,12 +101,17 @@
                 </div>
 
                 <div>
+
                     <p>Available</p>
-                    <h2>32</h2>
+
+                    <h2 id="availableVehicles">2</h2>
+
                 </div>
 
             </div>
 
+
+            <!-- Rented Vehicles -->
 
             <div class="stat-card">
 
@@ -94,12 +120,17 @@
                 </div>
 
                 <div>
+
                     <p>Rented</p>
-                    <h2>11</h2>
+
+                    <h2 id="rentedVehicles">1</h2>
+
                 </div>
 
             </div>
 
+
+            <!-- Maintenance Vehicles -->
 
             <div class="stat-card">
 
@@ -108,8 +139,11 @@
                 </div>
 
                 <div>
+
                     <p>Maintenance</p>
-                    <h2>5</h2>
+
+                    <h2 id="maintenanceVehicles">1</h2>
+
                 </div>
 
             </div>
@@ -117,43 +151,54 @@
         </section>
 
 
-        <!-- Fleet Status -->
-        <section class="fleet-section">
+        <!-- ================= FLEET SECTION ================= -->
+
+        <section class="fleet-section" id="fleet">
 
             <div class="section-header">
 
                 <div>
+
                     <h2>Fleet Status</h2>
 
                     <p>
                         Current status of all vehicles
                     </p>
+
                 </div>
 
-                <select class="filter">
 
-                    <option>All Vehicles</option>
-                    <option>Available</option>
-                    <option>Rented</option>
-                    <option>Maintenance</option>
+                <!-- JavaScript adds search input here -->
+
+                <select class="filter" id="vehicleFilter">
+
+                    <option value="all">All Vehicles</option>
+
+                    <option value="available">Available</option>
+
+                    <option value="rented">Rented</option>
+
+                    <option value="maintenance">Maintenance</option>
 
                 </select>
 
             </div>
 
 
-            <!-- Vehicle Cards -->
+            <!-- ================= VEHICLE GRID ================= -->
+
             <div class="vehicle-grid">
 
 
-                <!-- Vehicle 1 -->
+                <!-- VEHICLE 1 -->
+
                 <article class="vehicle-card">
 
                     <div class="vehicle-image">
 
                         <img
                             src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=900&q=80"
-                            alt="SUV vehicle">
+                            alt="Mahindra XUV700">
 
                     </div>
 
@@ -163,8 +208,11 @@
                         <div class="vehicle-title">
 
                             <div>
+
                                 <h3>Mahindra XUV700</h3>
+
                                 <p>HR 26 AB 1234</p>
+
                             </div>
 
                             <span class="status available">
@@ -177,13 +225,19 @@
                         <div class="vehicle-info">
 
                             <div>
+
                                 <span>Category</span>
+
                                 <strong>SUV</strong>
+
                             </div>
 
                             <div>
+
                                 <span>Last Service</span>
+
                                 <strong>10 Sep 2026</strong>
+
                             </div>
 
                         </div>
@@ -192,13 +246,19 @@
                         <div class="vehicle-info">
 
                             <div>
+
                                 <span>Next Service</span>
+
                                 <strong>10 Dec 2026</strong>
+
                             </div>
 
                             <div>
+
                                 <span>Maintenance Cost</span>
+
                                 <strong>₹4,500</strong>
+
                             </div>
 
                         </div>
@@ -214,14 +274,15 @@
 
 
 
-                <!-- Vehicle 2 -->
+                <!-- VEHICLE 2 -->
+
                 <article class="vehicle-card">
 
                     <div class="vehicle-image">
 
                         <img
                             src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80"
-                            alt="White SUV">
+                            alt="Hyundai Creta">
 
                     </div>
 
@@ -231,8 +292,11 @@
                         <div class="vehicle-title">
 
                             <div>
+
                                 <h3>Hyundai Creta</h3>
+
                                 <p>HR 29 CD 5678</p>
+
                             </div>
 
                             <span class="status rented">
@@ -245,13 +309,19 @@
                         <div class="vehicle-info">
 
                             <div>
+
                                 <span>Category</span>
+
                                 <strong>SUV</strong>
+
                             </div>
 
                             <div>
+
                                 <span>Last Service</span>
+
                                 <strong>02 Aug 2026</strong>
+
                             </div>
 
                         </div>
@@ -260,13 +330,19 @@
                         <div class="vehicle-info">
 
                             <div>
+
                                 <span>Next Service</span>
+
                                 <strong>02 Nov 2026</strong>
+
                             </div>
 
                             <div>
+
                                 <span>Maintenance Cost</span>
+
                                 <strong>₹3,800</strong>
+
                             </div>
 
                         </div>
@@ -282,14 +358,15 @@
 
 
 
-                <!-- Vehicle 3 -->
+                <!-- VEHICLE 3 -->
+
                 <article class="vehicle-card">
 
                     <div class="vehicle-image">
 
                         <img
                             src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=900&q=80"
-                            alt="Modern vehicle">
+                            alt="Tata Nexon">
 
                     </div>
 
@@ -299,8 +376,11 @@
                         <div class="vehicle-title">
 
                             <div>
+
                                 <h3>Tata Nexon</h3>
+
                                 <p>HR 30 EF 9012</p>
+
                             </div>
 
                             <span class="status maintenance">
@@ -313,13 +393,19 @@
                         <div class="vehicle-info">
 
                             <div>
+
                                 <span>Category</span>
+
                                 <strong>Compact SUV</strong>
+
                             </div>
 
                             <div>
+
                                 <span>Last Service</span>
+
                                 <strong>15 Sep 2026</strong>
+
                             </div>
 
                         </div>
@@ -328,13 +414,19 @@
                         <div class="vehicle-info">
 
                             <div>
+
                                 <span>Next Service</span>
+
                                 <strong>20 Sep 2026</strong>
+
                             </div>
 
                             <div>
+
                                 <span>Maintenance Cost</span>
+
                                 <strong>₹8,200</strong>
+
                             </div>
 
                         </div>
@@ -350,14 +442,15 @@
 
 
 
-                <!-- Vehicle 4 -->
+                <!-- VEHICLE 4 -->
+
                 <article class="vehicle-card">
 
                     <div class="vehicle-image">
 
                         <img
                             src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=900&q=80"
-                            alt="Car">
+                            alt="Maruti Swift">
 
                     </div>
 
@@ -367,8 +460,11 @@
                         <div class="vehicle-title">
 
                             <div>
+
                                 <h3>Maruti Swift</h3>
+
                                 <p>HR 38 GH 3456</p>
+
                             </div>
 
                             <span class="status available">
@@ -381,13 +477,19 @@
                         <div class="vehicle-info">
 
                             <div>
+
                                 <span>Category</span>
+
                                 <strong>Hatchback</strong>
+
                             </div>
 
                             <div>
+
                                 <span>Last Service</span>
+
                                 <strong>05 Sep 2026</strong>
+
                             </div>
 
                         </div>
@@ -396,13 +498,19 @@
                         <div class="vehicle-info">
 
                             <div>
+
                                 <span>Next Service</span>
+
                                 <strong>05 Dec 2026</strong>
+
                             </div>
 
                             <div>
+
                                 <span>Maintenance Cost</span>
+
                                 <strong>₹2,900</strong>
+
                             </div>
 
                         </div>
@@ -416,23 +524,27 @@
 
                 </article>
 
+
             </div>
 
         </section>
 
 
 
-        <!-- Maintenance Records -->
-        <section class="maintenance-section">
+        <!-- ================= MAINTENANCE SECTION ================= -->
+
+        <section class="maintenance-section" id="maintenance">
 
             <div class="section-header">
 
                 <div>
+
                     <h2>Maintenance Records</h2>
 
                     <p>
                         Recent vehicle maintenance activities
                     </p>
+
                 </div>
 
             </div>
@@ -445,12 +557,19 @@
                     <thead>
 
                         <tr>
+
                             <th>Vehicle</th>
+
                             <th>Service Type</th>
+
                             <th>Service Date</th>
+
                             <th>Next Service</th>
+
                             <th>Cost</th>
+
                             <th>Status</th>
+
                         </tr>
 
                     </thead>
@@ -458,94 +577,77 @@
 
                     <tbody>
 
+
+                        <!-- RECORD 1 -->
+
                         <tr>
 
-                            <td>
-                                Mahindra XUV700
-                            </td>
+                            <td>Mahindra XUV700</td>
+
+                            <td>Regular Service</td>
+
+                            <td>10 Sep 2026</td>
+
+                            <td>10 Dec 2026</td>
+
+                            <td>₹4,500</td>
 
                             <td>
-                                Regular Service
-                            </td>
 
-                            <td>
-                                10 Sep 2026
-                            </td>
-
-                            <td>
-                                10 Dec 2026
-                            </td>
-
-                            <td>
-                                ₹4,500
-                            </td>
-
-                            <td>
                                 <span class="table-status completed">
                                     Completed
                                 </span>
+
                             </td>
 
                         </tr>
 
 
+                        <!-- RECORD 2 -->
+
                         <tr>
 
-                            <td>
-                                Hyundai Creta
-                            </td>
+                            <td>Hyundai Creta</td>
+
+                            <td>Oil Change</td>
+
+                            <td>02 Aug 2026</td>
+
+                            <td>02 Nov 2026</td>
+
+                            <td>₹3,800</td>
 
                             <td>
-                                Oil Change
-                            </td>
 
-                            <td>
-                                02 Aug 2026
-                            </td>
-
-                            <td>
-                                02 Nov 2026
-                            </td>
-
-                            <td>
-                                ₹3,800
-                            </td>
-
-                            <td>
                                 <span class="table-status completed">
                                     Completed
                                 </span>
+
                             </td>
 
                         </tr>
 
 
+                        <!-- RECORD 3 -->
+
                         <tr>
 
-                            <td>
-                                Tata Nexon
-                            </td>
+                            <td>Tata Nexon</td>
+
+                            <td>Brake Service</td>
+
+                            <td>15 Sep 2026</td>
+
+                            <td>20 Sep 2026</td>
+
+                            <td>₹8,200</td>
 
                             <td>
-                                Brake Service
-                            </td>
 
-                            <td>
-                                15 Sep 2026
-                            </td>
-
-                            <td>
-                                20 Sep 2026
-                            </td>
-
-                            <td>
-                                ₹8,200
-                            </td>
-
-                            <td>
                                 <span class="table-status pending">
                                     In Progress
                                 </span>
+
                             </td>
 
                         </tr>
@@ -559,11 +661,13 @@
 
         </section>
 
+
     </main>
 
 
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
+
     <footer class="footer">
 
         <p>
@@ -571,6 +675,11 @@
         </p>
 
     </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="./script.js"></script>
 
 </body>
 
