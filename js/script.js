@@ -1022,40 +1022,41 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function setupNavigation() {
-        for (const link of navLinks) {
-            link.addEventListener("click", function (event) {
-                event.preventDefault();
-                const name = link.textContent.trim();
+    
+function setupNavigation() {
+    // Allow normal navigation to other HTML pages.
+    // Only handle links that point to sections on this page.
+    for (const link of navLinks) {
+        link.addEventListener("click", function (event) {
 
-                if (name === "Dashboard") {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                } else if (name === "Vehicles") {
-                    scrollToElement(document.getElementById("fleet"));
-                } else if (name === "Maintenance") {
-                    scrollToElement(document.getElementById("maintenance"));
-                } else if (name === "Bookings") {
-                    openBookings();
-                }
+            const href = link.getAttribute("href");
 
-                setActiveNav(name);
-            });
-        }
+            // If this is a link to another HTML page,
+            // let the browser open that page normally.
+            if (href && !href.startsWith("#")) {
+                return;
+            }
 
-        // Highlight the nav link of the section you are looking at
-        window.addEventListener("scroll", function () {
-            if (activeOverlay) return;      // do nothing while a popup is open
+            // Handle only section links below.
+            event.preventDefault();
 
-            let current = "Dashboard";
-            const fleet = document.getElementById("fleet");
-            const maintenance = document.getElementById("maintenance");
+            const name = link.textContent.trim();
 
-            if (fleet && fleet.getBoundingClientRect().top <= 140) current = "Vehicles";
-            if (maintenance && maintenance.getBoundingClientRect().top <= 140) current = "Maintenance";
+            if (name === "Dashboard") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            } else if (name === "Vehicles") {
+                scrollToElement(document.getElementById("fleet"));
+            } else if (name === "Maintenance") {
+                scrollToElement(document.getElementById("maintenance"));
+            } else if (name === "Bookings") {
+                openBookings();
+            }
 
-            setActiveNav(current);
-        }, { passive: true });
+            setActiveNav(name);
+        });
     }
+}
+
 
     function setupClicks() {
         // Add Maintenance button

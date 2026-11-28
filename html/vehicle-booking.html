@@ -1,44 +1,90 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>VRAFM - Vehicle Details & Booking</title>
 
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/vehicle-booking.css">
+    <link rel="stylesheet" href="../css/variables.css">
+     <link rel="stylesheet" href="../css/navbar.css">
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="nav-container">
+    
+<!-- GLOBAL NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
 
-            <a href="index.html" class="logo">VRAFM</a>
+            <a class="navbar-brand" href="index.html">
+                VRAFM
+            </a>
 
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="vehicle-booking.html" class="active">Vehicles</a>
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
-                <!-- Theme Toggle -->
-                <label for="theme-toggle" class="theme-button">
-                    🌙
-                </label>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <input type="checkbox" id="theme-toggle">
+            <div class="collapse navbar-collapse" id="mainNavbar">
 
-            </nav>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="vehicle-booking.html">Booking</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="customers.html">Customers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html">Admin</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="maintenance.html">Maintenance</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+
+                </ul>
+
+            </div>
         </div>
-    </header>
+    </nav>
+
 
 
     <!-- PAGE INTRO -->
     <section class="page-header">
-
         <div class="container">
 
             <h1>Vehicle Details & Booking</h1>
@@ -48,140 +94,382 @@
             </p>
 
         </div>
-
     </section>
 
 
-    <!-- VEHICLE DETAILS -->
-    <main class="container">
+    <!-- MAIN CONTENT -->
+    <main class="container py-5">
 
+        <!-- VEHICLE DETAILS -->
         <div class="vehicle-card">
 
-            <!-- VEHICLE IMAGE -->
             <div class="vehicle-image">
-
-               <img
-    src="https://toyotathaihoatuliem.com.vn/wp-content/uploads/2024/08/mau-sac-toyota-fortuner-2024-5.jpg"
-    alt="Toyota Fortuner"
->
-
+                <img
+                    id="vehicle-image"
+                    src="../images/TOYOTA_4x4.png"
+                    alt="Vehicle Image">
             </div>
 
-
-            <!-- VEHICLE INFORMATION -->
             <div class="vehicle-info">
 
                 <div class="title-row">
 
-                    <h2>Toyota Fortuner</h2>
+                    <h2 id="vehicle-heading">Toyota Fortuner</h2>
 
-                    <span class="available">
+                    <span
+                        id="vehicle-availability"
+                        class="badge bg-success">
                         Available
                     </span>
 
                 </div>
 
-
                 <div class="price">
-                    ₹4,500 <span>/ day</span>
+                    <span id="vehicle-price">₹4,500</span>
+                    <span>/ day</span>
                 </div>
-
 
                 <div class="vehicle-details">
 
                     <div class="detail-row">
                         <span>Type</span>
-                        <strong>SUV</strong>
+                        <strong id="vehicle-category">SUV</strong>
                     </div>
 
                     <div class="detail-row">
                         <span>Fuel</span>
-                        <strong>Diesel</strong>
+                        <strong id="vehicle-fuel">Diesel</strong>
                     </div>
 
                     <div class="detail-row">
                         <span>Transmission</span>
-                        <strong>Automatic</strong>
+                        <strong id="vehicle-transmission">Automatic</strong>
                     </div>
 
                     <div class="detail-row">
                         <span>Seats</span>
-                        <strong>7</strong>
+                        <strong id="vehicle-seats">7</strong>
                     </div>
 
                 </div>
 
-
-                <p class="description">
+                <p class="description" id="vehicle-description">
                     Spacious and comfortable SUV suitable for family trips,
                     business travel and long-distance journeys.
                 </p>
 
+                <!-- VEHICLE FEATURES -->
+                <h3>Vehicle Features</h3>
 
-                <!-- BOOKING FORM -->
-                <div class="booking-section">
-
-                    <h3>Book This Vehicle</h3>
-
-                    <form>
-
-                        <div class="form-group">
-
-                            <label for="pickup">
-                                Pickup Date
-                            </label>
-
-                            <input
-                                type="date"
-                                id="pickup"
-                                name="pickup"
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="return">
-                                Return Date
-                            </label>
-
-                            <input
-                                type="date"
-                                id="return"
-                                name="return"
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="location">
-                                Pickup Location
-                            </label>
-
-                            <input
-                                type="text"
-                                id="location"
-                                name="location"
-                                placeholder="Enter pickup location"
-                            >
-
-                        </div>
-
-
-                        <button type="submit" class="book-button">
-                            Book Now
-                        </button>
-
-                    </form>
-
+                <div id="features-list" class="row g-3">
+                    <!-- Features generated by main.js -->
                 </div>
 
             </div>
 
         </div>
+
+
+        <!-- BOOKING SECTION -->
+        <section class="booking-section mt-5">
+
+            <h2>Book This Vehicle</h2>
+
+            <!-- Notifications -->
+            <div id="notification"></div>
+
+            <form id="booking-form" novalidate>
+
+                <div class="row g-3">
+
+                    <!-- CUSTOMER NAME -->
+                    <div class="col-md-6">
+
+                        <label for="full-name" class="form-label">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="full-name"
+                            class="form-control"
+                            placeholder="Enter your full name"
+                            autocomplete="name">
+
+                        <div id="full-name-error" class="text-danger small"></div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="col-md-6">
+
+                        <label for="email" class="form-label">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            class="form-control"
+                            placeholder="name@example.com"
+                            autocomplete="email">
+
+                        <div id="email-error" class="text-danger small"></div>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+                    <div class="col-md-6">
+
+                        <label for="phone" class="form-label">
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            class="form-control"
+                            placeholder="Enter 10-digit mobile number"
+                            autocomplete="tel">
+
+                        <div id="phone-error" class="text-danger small"></div>
+
+                    </div>
+
+
+                    <!-- PICKUP LOCATION -->
+                    <div class="col-md-6">
+
+                        <label for="pickup-location" class="form-label">
+                            Pickup Location
+                        </label>
+
+                        <select
+                            id="pickup-location"
+                            class="form-select">
+
+                            <option value="">Select pickup location</option>
+                            <option value="Main Branch">Main Branch</option>
+                            <option value="Airport Branch">Airport Branch</option>
+                            <option value="Railway Station Branch">Railway Station Branch</option>
+                            <option value="City Center Branch">City Center Branch</option>
+
+                        </select>
+
+                        <div id="pickup-location-error" class="text-danger small"></div>
+
+                    </div>
+
+
+                    <!-- PICKUP DATE -->
+                    <div class="col-md-6">
+
+                        <label for="pickup-date" class="form-label">
+                            Pickup Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="pickup-date"
+                            class="form-control">
+
+                        <div id="pickup-date-error" class="text-danger small"></div>
+
+                    </div>
+
+
+                    <!-- PICKUP TIME -->
+                    <div class="col-md-6">
+
+                        <label for="pickup-time" class="form-label">
+                            Pickup Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="pickup-time"
+                            class="form-control">
+
+                    </div>
+
+
+                    <!-- RETURN DATE -->
+                    <div class="col-md-6">
+
+                        <label for="return-date" class="form-label">
+                            Return Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="return-date"
+                            class="form-control">
+
+                        <div id="return-date-error" class="text-danger small"></div>
+
+                    </div>
+
+
+                    <!-- RETURN TIME -->
+                    <div class="col-md-6">
+
+                        <label for="return-time" class="form-label">
+                            Return Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="return-time"
+                            class="form-control">
+
+                    </div>
+
+
+                    <!-- SPECIAL REQUESTS -->
+                    <div class="col-12">
+
+                        <label for="special-requests" class="form-label">
+                            Special Requests (Optional)
+                        </label>
+
+                        <textarea
+                            id="special-requests"
+                            class="form-control"
+                            rows="3"
+                            placeholder="Enter any special requirements">
+                        </textarea>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+                    <div class="col-12">
+
+                        <div class="form-check">
+
+                            <input
+                                type="checkbox"
+                                id="agree-terms"
+                                class="form-check-input">
+
+                            <label for="agree-terms" class="form-check-label">
+                                I agree to the terms and conditions.
+                            </label>
+
+                        </div>
+
+                        <div id="agree-terms-error" class="text-danger small"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOKING SUMMARY -->
+                <div class="card mt-4">
+
+                    <div class="card-body">
+
+                        <h3>Booking Summary</h3>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Vehicle</span>
+                            <strong id="summary-vehicle">Toyota Fortuner</strong>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Daily Rate</span>
+                            <strong id="summary-rate">₹4,500 / day</strong>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Pickup Location</span>
+                            <strong id="summary-location">Selected pickup location</strong>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Pickup Date</span>
+                            <strong id="summary-pickup-date">Selected date</strong>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Return Date</span>
+                            <strong id="summary-return-date">Selected date</strong>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Rental Duration</span>
+                            <strong id="summary-days">Select valid dates</strong>
+                        </div>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-between">
+                            <h4>Total Amount</h4>
+                            <h4 id="summary-total">Select valid dates</h4>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM BUTTONS -->
+                <div class="mt-4 d-flex gap-3 flex-wrap">
+
+                    <button
+                        type="submit"
+                        id="confirm-btn"
+                        class="btn btn-primary">
+
+                        <span
+                            id="confirm-spinner"
+                            class="spinner-border spinner-border-sm d-none"
+                            aria-hidden="true">
+                        </span>
+
+                        <span id="confirm-label">Confirm Booking</span>
+
+                    </button>
+
+                    <button
+                        type="button"
+                        id="reset-btn"
+                        class="btn btn-secondary">
+
+                        Reset Form
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- BOOKING CONFIRMATION -->
+        <section class="card mt-5">
+
+            <div class="card-body">
+
+                <h2 id="confirmation-heading">
+                    Booking Confirmation
+                </h2>
+
+                <div id="confirmation-content">
+
+                    <p class="text-muted mb-0">
+                        No booking has been confirmed yet.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 
@@ -194,6 +482,10 @@
         </p>
 
     </footer>
+
+
+    <!-- RISHI'S MAIN JAVASCRIPT ENTRY POINT -->
+    <script type="module" src="../js/main.js"></script>
 
 </body>
 </html>

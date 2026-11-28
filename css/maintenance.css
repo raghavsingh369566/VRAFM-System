@@ -39,26 +39,7 @@ body {
 }
 
 
-.navbar {
-    display: flex;
-    gap: 30px;
-}
 
-
-.navbar a {
-    text-decoration: none;
-
-    color: #4b5563;
-
-    font-size: 15px;
-    font-weight: 500;
-}
-
-
-.navbar a:hover,
-.navbar a.active {
-    color: #2563eb;
-}
 
 
 .profile {
@@ -597,9 +578,7 @@ tbody tr:hover {
     }
 
 
-    .navbar {
-        gap: 15px;
-    }
+    
 
 }
 
@@ -618,11 +597,7 @@ tbody tr:hover {
     }
 
 
-    .navbar {
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
+    
 
 
     .container {
